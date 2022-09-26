@@ -43,9 +43,11 @@ if __name__ == "__main__":
         if a == 1:
             centraLibrary.displayAvailableBooks()
         elif a == 2:
-            centraLibrary.borrowBook(student.requestBook())
+            bookName=input("Enter the book you want to borrow")
+            centraLibrary.borrowBook(bookName)
         elif a == 3:
-            centraLibrary.returnBook(student.returnBook())
+            bookName=input("Enter the book you want to return")
+            centraLibrary.returnBook(bookName)
         elif a == 4:
             print("Thanks for choosing Central Library. Have a great day ahead!")
             exit()
