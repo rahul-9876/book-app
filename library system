@@ -20,11 +20,18 @@ class Library:
             return True
         else:
             print("Sorry, This book is either not available or has already been issued to someone else. Please wait until the book is available")
-            return False
-
+            return False      
     def returnBook(self, bookName):
         self.books.append(bookName)
         print("Thanks for returning this book! Hope you enjoyed reading it. Have a great day ahead!")
+class Student: 
+    def requestBook(self):
+        book = input("Enter the name of the book you want to borrow: ")
+        return (book)
+
+    def returnBook(self):
+        self.book = input("Enter the name of the book you want to return: ")
+        return self.book               
 
 if __name__ == "__main__":
     centraLibrary = Library(["alphabets","heidi","the merchant of venice","the great king"])
@@ -43,11 +50,9 @@ if __name__ == "__main__":
         if a == 1:
             centraLibrary.displayAvailableBooks()
         elif a == 2:
-            bookName=input("Enter the book you want to borrow")
-            centraLibrary.borrowBook(bookName)
+            centraLibrary.borrowBook(student.requestBook())
         elif a == 3:
-            bookName=input("Enter the book you want to return")
-            centraLibrary.returnBook(bookName)
+            centraLibrary.returnBook(student.returnBook())
         elif a == 4:
             print("Thanks for choosing Central Library. Have a great day ahead!")
             exit()
